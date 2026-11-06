@@ -1,0 +1,22 @@
+<h3>Libreria de Comics</h3>
+
+ <!-- en una tabla -->
+
+<table>
+    <tr>
+        @for(tebeo of arrayComics; track tebeo){
+            <!-- <app-comic-component [titulo]="tebeo.titulo"
+                                [descripcion]="tebeo.descripcion"/> -->
+            <td><app-comic-component [comic]="tebeo"/></td>
+        }
+    </tr>
+</table>
+
+ <!-- sin formatear -->
+
+@for(tebeo of arrayComics; track tebeo){
+    <!-- <app-comic-component [titulo]="tebeo.titulo"
+                         [descripcion]="tebeo.descripcion"/> -->
+    <app-comic-component [comic]="tebeo"/>
+}
+

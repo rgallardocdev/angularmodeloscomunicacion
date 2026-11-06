@@ -1,0 +1,10 @@
+<p>comic-json-component works!</p>
+
+<button (click)="cargarComics()">cargarComics</button>
+
+@for(tebeo of _arrayComics; track tebeo) {
+  <h3 style="font-weight: bold; color: green;">{{ tebeo.titulo }}</h3>
+  <img width="300" height="400" src="{{tebeo.imagen}}">
+  <p>{{ tebeo.descripcion }}</p>
+  <br><br>
+}

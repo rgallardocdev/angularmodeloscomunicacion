@@ -1,0 +1,13 @@
+<p>comic-simple-component works!</p>
+<p style="font-weight: bold; color: blue;">{{ _comic.titulo }}</p>
+<img width="300" height="400" [src]="_comic.imagen" [alt]="_comic.descripcion">
+<p>{{ _comic.descripcion }}</p>
+<br><br>
+<button (click)="mostrarComic()">Mostrar Cómics</button>
+<br><br>
+@for (tebeo of _arrayComics; track tebeo) {
+  <h3 style="font-weight: bold; color: green;">{{ tebeo.titulo }}</h3>
+  <img width="300" height="400" [src]="tebeo.imagen" [alt]="tebeo.descripcion">
+  <p>{{ tebeo.descripcion }}</p>
+  <br><br>
+}

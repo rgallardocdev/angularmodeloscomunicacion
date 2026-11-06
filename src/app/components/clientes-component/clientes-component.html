@@ -1,0 +1,20 @@
+<p>clientes-component works!</p>
+<form #form="ngForm">
+    <label>Introduzca el Id: </label><input type="number" name="idcliente" #idcliente/>
+    <button (click)="buscarCliente()" >Buscar Cliente</button>
+    <br><br>
+    <select name="selectIDcliente" #selectIDcliente>
+        @for(cliente of _listadoClientes; track cliente){
+            <option value="{{cliente.idcliente}}">{{cliente.nombre}}</option>
+        }
+    </select>
+    <button (click)="buscarClienteSelect(selectIDcliente.value)">Buscar Cliente Select</button>
+    <br><br>
+</form>
+@if(_datosCliente){
+    <div>
+        <label style="width: 90px;">Nombre: </label><input type="text" disabled value="{{_datosCliente.nombre}}" /><br>
+        <label style="width: 90px;">Pagina Web: </label><input type="text" disabled value="{{_datosCliente.paginaweb}}" /><br>
+        <label>Imagen: </label><img src="{{_datosCliente.imagencliente}}" width="300px"/>
+    </div>
+}

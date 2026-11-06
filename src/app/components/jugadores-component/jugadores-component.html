@@ -1,0 +1,6 @@
+<p>jugadores-component works!</p>
+<!-- <button (click)="cargarJugadores()">Cargar Jugadores</button> -->
+@for(jugador of _arrayJugadores; track jugador){
+    <p>{{jugador.jugador}}</p>
+    <img src="{{jugador.imagen}}" width="300px"/>
+}
