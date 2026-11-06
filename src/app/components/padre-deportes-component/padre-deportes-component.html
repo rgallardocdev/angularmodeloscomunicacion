@@ -1,6 +1,6 @@
 <p>padre-deportes-component works!</p>
 @for(deporte of arrayDeportes; track deporte){
-    <app-hijo-deporte-component [sport]="deporte" (miFavorito)="mostrarFavorito($event)"/>
+    <app-hijo-deporte-component [sport]="deporte" (objPadre)="mostrarFavorito($event)"/>
 }
 <h3>{{mensaje}}</h3>
 

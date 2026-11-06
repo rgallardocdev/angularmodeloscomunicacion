@@ -8,12 +8,12 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
 })
 export class HijoDeporteComponent {
   @Input() sport!: string;
-  @Output() miFavorito: EventEmitter<any> = new EventEmitter();
+  @Output() objPadre: EventEmitter<any> = new EventEmitter();
 
   mensajeLocal!:string;
 
-  mostrarFavorito(): void{
+  enviarFavorito(): void{
      this.mensajeLocal = `has pulsado el boton del deporte: ${this.sport} `;
-    this.miFavorito.emit(this.sport);
+    this.objPadre.emit(this.sport);
   }
 }

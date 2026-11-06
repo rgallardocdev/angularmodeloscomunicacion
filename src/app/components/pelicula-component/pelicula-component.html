@@ -1,0 +1,24 @@
+<p>pelicula-component works!</p>
+
+<div class="card" style="width: 18rem;">
+  <!-- <img src="{{comic.imagen}}" class="card-img-top" alt="..."> -->
+    <h6 class="card-title" style="text-align: center;">{{pelicula.Titulo}}</h6>
+    <div class="card-body">
+        <label style="font-style: italic;">Argumento:</label><p class="card-text">{{pelicula.Argumento}}</p>
+        <label style="font-style: italic;">Fecha Estreno:</label><p class="card-text">{{pelicula.Fecha_Estreno}}</p>
+        <label style="font-style: italic;">Director:</label><p class="card-text">{{pelicula.Director}}</p>
+        <label style="font-style: italic;">Duracion:</label><p class="card-text">{{pelicula.Duracion}}</p>
+        <label style="font-style: italic;">Youtube:</label><p class="card-text">{{pelicula.YouTube}}</p>
+        <label style="font-style: italic;">Genero:</label><p class="card-text">{{pelicula.Genero}}</p>
+        <label style="font-style: italic;">Pais:</label><p class="card-text">{{pelicula.Pais}}</p>                
+        <!-- <app-ver-pelicula-component [urlPelicula]="{{pelicula.YouTube}}"/> -->
+        <iframe width="560" height="315" 
+            src="https://youtube.com/embed/{{pelicula.YouTube}}" 
+            title="Reproductor de vídeo de YouTube" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>        
+    </div>
+</div>
+<br>

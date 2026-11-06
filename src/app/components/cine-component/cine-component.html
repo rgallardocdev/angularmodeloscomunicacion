@@ -1,0 +1,11 @@
+<p>cine-component works!</p>
+
+<table>
+    <tr>
+        @for(peli of arrayPeliculas; track peli){
+            <td><app-pelicula-component [pelicula]="peli"/></td>
+        }
+    </tr>
+</table>
+
+

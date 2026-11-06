@@ -1,0 +1,10 @@
+<p style="color: brown;">Componente Padre</p>
+<h3 style="color: chocolate;">La suma de los numeros es: {{sumaTotal}}</h3>
+<form #miFormulario="ngForm">
+    <label>Intruduzca un numero: </label><input type="number" name="cajaNumero" #cajaNumero/>
+    <button (click)="agregarNumero()">Agregar Numero</button>
+</form>
+<br>
+@for(num of arrayNumeros; track num){
+    <app-hijo-numero-component [miNumero]="num" (objPadre)="sumarNumeros($event)"/>
+}
